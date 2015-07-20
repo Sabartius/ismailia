@@ -77,7 +77,10 @@ export class Instrumenter extends istanbul.Instrumenter {
         ;
 
         compiler = new traceur.NodeCompiler({
-            modules: 'amd',
+            modules: 'instantiate',
+            annotations: true,
+            types: true,
+            memberVariables: true,
             sourceMaps: true
         });
 
